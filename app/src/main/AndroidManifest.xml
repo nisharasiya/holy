@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="rahul.com.newholypublicschool">
+    package="aleris.com.holypublicschoolll">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -17,7 +17,13 @@
     <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -45,41 +51,184 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:ignore="HardcodedDebugMode">
-        <activity android:name=".Splash">
+        <activity
+            android:name=".Splash"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Content"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Teacher"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DashboardManager"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".Attendance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Homework"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Forgotpass"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reception"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ResetPass"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Utils.CropActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FeesStruct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reportcard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".My_info"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Pdf"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Report_card"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Classmate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Compose"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReceptionRecord"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Bus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PasswordChange"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutSchool"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TeacherUpload"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TimeTable"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Notice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FileDownload"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TeacherInfo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Downloader"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".example"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Memories"
+            android:screenOrientation="portrait" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification" />
+        <!--
+        Set color used with incoming notification messages. This is used when no color is set for the incoming
+        notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provide_paths" />
+        </provider>
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".AttendanceTeacher" />
+        <activity android:name=".Student" />
+        <activity android:name=".Stu" />
+        <activity android:name=".TeacherTime" />
+        <activity android:name=".TeacherProfile" />
+        <activity android:name=".SendSMS" />
+        <activity android:name=".Admin" />
+        <activity android:name=".AttendanceReport" />
+        <activity android:name=".SmsMobile" />
+        <activity android:name=".Fees" />
+        <activity android:name=".TeacherSms" />
+        <activity android:name=".Gallery" />
+        <activity android:name=".Scroll" />
+
+        <service
+            android:name=".HeartBeat"
+            android:enabled="true" />
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".Emlpoyee" />
+        <activity android:name=".HolyLayout" >
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
-        <activity android:name=".Content" />
-        <activity android:name=".Teacher" />
-        <activity android:name=".DashboardManager" />
-        <activity android:name=".Login" />
-        <activity android:name=".Attendance" />
-        <activity android:name=".Homework" />
-        <activity android:name=".Forgotpass" />
-        <activity android:name=".Reception" />
-        <activity android:name=".ResetPass" />
-        <activity android:name=".Utils.CropActivity" />
-        <activity android:name=".FeesStruct" />
-        <activity android:name=".Reportcard" />
-        <activity android:name=".My_info" />
-        <activity android:name=".Pdf" />
-        <activity android:name=".Report_card" />
-        <activity android:name=".Classmate" />
-        <activity android:name=".Compose" />
-        <activity android:name=".ReceptionRecord" />
-        <activity android:name=".Bus" />
-        <activity android:name=".PasswordChange" />
-        <activity android:name=".AboutSchool" />
-        <activity android:name=".TeacherUpload" />
-        <activity android:name=".TimeTable" />
-        <activity android:name=".Notice" />
-        <activity android:name=".FileDownload" />
-        <activity android:name=".TeacherInfo" />
-        <activity android:name=".Downloader" />
-        <activity android:name=".example"></activity>
+        <activity android:name=".Demo"></activity>
     </application>
 
 </manifest>

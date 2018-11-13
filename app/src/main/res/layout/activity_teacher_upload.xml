@@ -89,6 +89,15 @@
                     android:background="@color/colorPrimary" />
             </LinearLayout>
 
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Remarks"
+                android:id="@+id/remarks"
+                android:padding="10dp"/>
+
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="wrap_content"

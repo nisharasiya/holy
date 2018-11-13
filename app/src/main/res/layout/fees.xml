@@ -9,6 +9,7 @@
         android:background="@color/colorPrimary"
         android:layout_height="50dp">
 
+
         <ImageView
             android:id="@+id/back"
             android:layout_marginLeft="5dp"
@@ -43,7 +44,7 @@
             android:id="@+id/dues"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
+            android:visibility="gone"
             android:text="To be pay"
             android:textSize="@dimen/smallTextSize" />
 
@@ -51,8 +52,10 @@
             android:id="@+id/paid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
             android:text="Paid"
+            android:checked="true"
             android:textSize="@dimen/smallTextSize" />
     </RadioGroup>
 
@@ -66,11 +69,13 @@
         android:id="@+id/empty"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:gravity="center"
-        android:visibility="visible"
         android:text="No Record Found"
         android:textColor="@android:color/holo_red_dark"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:visibility="visible" />
 
 
 

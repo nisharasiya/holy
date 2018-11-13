@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "22807328827",
+    "firebase_url": "https://holy-c5ee1.firebaseio.com",
+    "project_id": "holy-c5ee1",
+    "storage_bucket": "holy-c5ee1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22807328827:android:4f3ff6bfbafeb887",
+        "android_client_info": {
+          "package_name": "aleris.com.holypublicschoolll"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22807328827-kfsghcmu8gk8e96m5f7cb6ail6mjtmng.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "aleris.com.holypublicschoolll",
+            "certificate_hash": "3a5b94027f2517fc3e154fe086d14b5ff13c032d"
+          }
+        },
+        {
+          "client_id": "22807328827-3nftbobaevglccp0j7ecr74m54snnjqt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYv0hANZOZSdoQXYdmzucCa5asEtmuOs8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22807328827-3nftbobaevglccp0j7ecr74m54snnjqt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

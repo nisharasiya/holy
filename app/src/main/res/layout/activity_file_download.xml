@@ -10,73 +10,72 @@
     <RelativeLayout
         android:id="@+id/tab"
         android:layout_width="wrap_content"
-        android:background="@color/colorPrimary"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
 
         <ImageView
             android:id="@+id/back"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="13dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_arrow"/>
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/ic_arrow" />
 
 
         <TextView
             android:layout_width="match_parent"
-            android:text="Upload File"
+            android:layout_height="match_parent"
             android:layout_marginLeft="35dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
             android:gravity="center_vertical"
+            android:text="Upload File"
             android:textColor="@color/White"
-            android:layout_height="match_parent" />
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
-        <LinearLayout
-            android:id="@+id/beg"
-            android:layout_below="@+id/tab"
+    <LinearLayout
+        android:id="@+id/beg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tab"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+
+        <Spinner
+            android:id="@+id/menu_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:focusableInTouchMode="true"
-            android:orientation="vertical">
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <Spinner
-                android:id="@+id/menu_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0.6dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:background="@color/colorPrimary" />
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/download"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Download"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.6dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary" />
         </LinearLayout>
 
+        <Button
+            android:id="@+id/download"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Download" />
+    </LinearLayout>
+
     <ListView
-        android:layout_below="@+id/beg"
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:layout_below="@+id/beg" />
 
     <TextView
         android:id="@+id/empty"

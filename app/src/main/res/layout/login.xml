@@ -70,6 +70,18 @@
             android:maxLength="16"
             android:paddingBottom="@dimen/textPadding" />
 
+
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/checkbox"
+            android:text="Show Password"/>
+
+
         <TextView
             android:id="@+id/forgot_pass"
             android:layout_width="wrap_content"
